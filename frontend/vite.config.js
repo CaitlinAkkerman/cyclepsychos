@@ -7,7 +7,7 @@ export default defineConfig({
     port: 3000,
     proxy: {
       "/api": {
-        target: "cyclepsychos-production.up.railway.app",
+        target: "https://cyclesychos-backend-caitlin-6ab76aef67b6.herokuapp.com/",
         changeOrigin: true
       }
     }
