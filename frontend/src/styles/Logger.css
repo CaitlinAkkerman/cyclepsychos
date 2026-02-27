@@ -1,0 +1,256 @@
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid rgba(8, 247, 254, 0.1);
+}
+
+.modal-header h2 {
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.modal-close {
+  background: none;
+  border: none;
+  color: var(--text-secondary);
+  cursor: pointer;
+  padding: 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 6px;
+  transition: all 0.3s ease;
+}
+
+.modal-close:hover {
+  background: rgba(8, 247, 254, 0.1);
+  color: var(--accent-blue);
+}
+
+.logger-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group label {
+  font-weight: 600;
+  margin-bottom: 0.75rem;
+  font-size: 0.95rem;
+  color: var(--text-primary);
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group input[type="date"],
+.form-group select,
+.form-group textarea {
+  padding: 0.75rem;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(8, 247, 254, 0.2);
+  border-radius: 8px;
+  color: var(--text-primary);
+  font-family: 'Poppins', sans-serif;
+  font-size: 0.95rem;
+  transition: all 0.3s ease;
+}
+
+.form-group input[type="date"],
+.form-group select {
+  cursor: pointer;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: var(--accent-blue);
+  background: rgba(8, 247, 254, 0.05);
+  box-shadow: 0 0 12px rgba(8, 247, 254, 0.1);
+}
+
+.form-group textarea {
+  resize: vertical;
+}
+
+/* RADIO GROUP */
+.radio-group {
+  display: flex;
+  gap: 1rem;
+  flex-direction: column;
+}
+
+.radio-option {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  cursor: pointer;
+  padding: 0.75rem;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(8, 247, 254, 0.1);
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.radio-option:hover {
+  border-color: var(--accent-blue);
+  background: rgba(8, 247, 254, 0.05);
+}
+
+.radio-option input[type="radio"] {
+  cursor: pointer;
+  accent-color: var(--accent-red);
+  width: 18px;
+  height: 18px;
+}
+
+.radio-option span {
+  font-weight: 500;
+}
+
+/* FLOW OPTIONS */
+.flow-options {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  gap: 0.75rem;
+}
+
+.flow-btn {
+  padding: 1rem;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(8, 247, 254, 0.1);
+  border-radius: 8px;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  transition: all 0.3s ease;
+  color: var(--text-secondary);
+  font-family: 'Poppins', sans-serif;
+}
+
+.flow-btn:hover {
+  border-color: var(--accent-blue);
+  background: rgba(8, 247, 254, 0.05);
+  color: var(--text-primary);
+}
+
+.flow-btn.active {
+  border-color: var(--accent-red);
+  background: linear-gradient(135deg, rgba(255, 0, 110, 0.15), rgba(8, 247, 254, 0.05));
+  color: var(--text-primary);
+}
+
+.flow-emoji {
+  font-size: 1.5rem;
+}
+
+.flow-label {
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+/* SYMPTOMS GRID */
+.symptoms-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(110px, 1fr));
+  gap: 0.75rem;
+}
+
+.symptom-btn {
+  padding: 0.75rem;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(8, 247, 254, 0.1);
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 0.85rem;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  color: var(--text-secondary);
+  font-family: 'Poppins', sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.4rem;
+}
+
+.symptom-btn:hover {
+  border-color: var(--accent-blue);
+  background: rgba(8, 247, 254, 0.05);
+  color: var(--text-primary);
+}
+
+.symptom-btn.selected {
+  border-color: var(--accent-purple);
+  background: linear-gradient(135deg, rgba(114, 9, 183, 0.2), rgba(114, 9, 183, 0.1));
+  color: var(--accent-purple);
+}
+
+.symptom-btn svg {
+  width: 16px;
+  height: 16px;
+}
+
+/* FORM ERROR */
+.form-error {
+  color: #ff6b9d;
+  font-size: 0.85rem;
+  padding: 0.5rem;
+  background: rgba(255, 0, 110, 0.1);
+  border-left: 2px solid var(--accent-red);
+  border-radius: 4px;
+}
+
+.logger-modal .btn {
+  width: 100%;
+  justify-content: center;
+}
+
+.period-duration {
+  display: flex;
+  justify-content: center;
+  margin: 1rem 0;
+}
+
+.duration-badge {
+  background: linear-gradient(90deg, var(--accent-purple), var(--accent-blue));
+  color: white;
+  padding: 0.6rem 1.2rem;
+  border-radius: 20px;
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+@media (max-width: 768px) {
+  .modal-content {
+    max-width: 100%;
+    padding: 1.5rem;
+  }
+
+  .flow-options {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .symptoms-grid {
+    grid-template-columns: repeat(auto-fill, minmax(90px, 1fr));
+  }
+
+  .form-row {
+    grid-template-columns: 1fr;
+  }
+}

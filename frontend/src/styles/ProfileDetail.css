@@ -1,0 +1,349 @@
+.profile-detail-page {
+  animation: fadeIn 0.5s ease-in;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-width: 650px;
+  margin: 0 auto;
+}
+
+.profile-page-header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid rgba(8, 247, 254, 0.1);
+  width: 100%;
+}
+
+.back-btn {
+  background: transparent;
+  border: none;
+  color: var(--accent-blue);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  padding: 0.5rem;
+  border-radius: 6px;
+  transition: all 0.3s ease;
+}
+
+.back-btn:hover {
+  background: rgba(8, 247, 254, 0.1);
+  transform: translateX(-4px);
+}
+
+.profile-page-header h1 {
+  font-size: 1.5rem;
+  font-weight: 800;
+  flex: 1;
+}
+
+.profile-badge {
+  background: rgba(114, 9, 183, 0.2);
+  border: 1px solid var(--accent-purple);
+  color: var(--accent-purple);
+  padding: 0.45rem 0.9rem;
+  border-radius: 20px;
+  font-weight: 600;
+  font-size: 0.8rem;
+}
+
+.profile-page-content {
+  display: grid;
+  gap: 1.25rem;
+  width: 100%;
+}
+
+/* Info Card */
+.profile-info-card {
+  background: linear-gradient(135deg, rgba(26, 31, 58, 0.8), rgba(15, 20, 41, 0.6));
+  border: 1px solid rgba(8, 247, 254, 0.15);
+  border-radius: 12px;
+  padding: 1.25rem;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+}
+
+.profile-info-card h2 {
+  font-size: 0.95rem;
+  font-weight: 700;
+  margin-bottom: 0.75rem;
+}
+
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.75rem;
+}
+
+.card-header h2 {
+  font-size: 0.95rem;
+  font-weight: 700;
+}
+
+.info-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 1rem;
+}
+
+.info-item {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.info-item .label {
+  color: var(--text-secondary);
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+
+.info-item .value {
+  color: var(--text-primary);
+  font-size: 0.95rem;
+  font-weight: 700;
+}
+
+/* Edit Form */
+.edit-form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.edit-form .form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.edit-form .form-group label {
+  font-weight: 600;
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+}
+
+.edit-form .form-group input {
+  padding: 0.5rem;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(8, 247, 254, 0.2);
+  border-radius: 6px;
+  color: var(--text-primary);
+  font-family: 'Poppins', sans-serif;
+  font-size: 0.85rem;
+}
+
+.edit-form .form-group input:focus {
+  outline: none;
+  border-color: var(--accent-blue);
+  background: rgba(8, 247, 254, 0.05);
+}
+
+.form-actions {
+  display: flex;
+  gap: 0.75rem;
+  margin-top: 0.75rem;
+}
+
+.form-actions .btn {
+  flex: 1;
+  text-align: center;
+  padding: 0.5rem;
+}
+
+/* Period History */
+.period-history-card {
+  background: linear-gradient(135deg, rgba(26, 31, 58, 0.8), rgba(15, 20, 41, 0.6));
+  border: 1px solid rgba(8, 247, 254, 0.15);
+  border-radius: 12px;
+  padding: 1.25rem;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+}
+
+.period-history-card h2 {
+  font-size: 0.95rem;
+  font-weight: 700;
+  margin-bottom: 0.75rem;
+}
+
+.period-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.period-entry {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 0, 110, 0.2);
+  border-radius: 8px;
+  padding: 0.8rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.5rem;
+  transition: all 0.3s ease;
+}
+
+.period-entry:hover {
+  border-color: rgba(255, 0, 110, 0.4);
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.period-dates {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-weight: 600;
+  font-size: 0.85rem;
+  flex-wrap: wrap;
+}
+
+.start-date {
+  color: var(--text-primary);
+}
+
+.separator {
+  color: var(--accent-blue);
+}
+
+.end-date {
+  color: var(--text-primary);
+}
+
+.period-notes {
+  flex: 1;
+}
+
+.period-notes p {
+  color: var(--text-secondary);
+  font-size: 0.75rem;
+  font-style: italic;
+}
+
+.edit-btn {
+  background: transparent;
+  border: 1px solid var(--accent-blue);
+  color: var(--accent-blue);
+  padding: 0.35rem 0.6rem;
+  border-radius: 6px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  font-family: 'Poppins', sans-serif;
+}
+
+.edit-btn:hover {
+  background: rgba(8, 247, 254, 0.1);
+  transform: translateY(-2px);
+}
+
+/* Symptom History */
+.symptom-history-card {
+  background: linear-gradient(135deg, rgba(26, 31, 58, 0.8), rgba(15, 20, 41, 0.6));
+  border: 1px solid rgba(8, 247, 254, 0.15);
+  border-radius: 12px;
+  padding: 1.25rem;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+}
+
+.symptom-history-card h2 {
+  font-size: 0.95rem;
+  font-weight: 700;
+  margin-bottom: 0.75rem;
+}
+
+.symptom-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.symptom-entry {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(114, 9, 183, 0.2);
+  border-radius: 8px;
+  padding: 0.6rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.5rem;
+  transition: all 0.3s ease;
+}
+
+.symptom-entry:hover {
+  border-color: rgba(114, 9, 183, 0.4);
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.symptom-date {
+  color: var(--text-secondary);
+  font-size: 0.8rem;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.symptom-tags {
+  display: flex;
+  gap: 0.4rem;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+}
+
+.symptom-tag {
+  background: rgba(114, 9, 183, 0.2);
+  border: 1px solid var(--accent-purple);
+  color: var(--accent-purple);
+  padding: 0.2rem 0.45rem;
+  border-radius: 12px;
+  font-size: 0.7rem;
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+.empty {
+  color: var(--text-secondary);
+  font-style: italic;
+  text-align: center;
+  padding: 1.5rem;
+  font-size: 0.9rem;
+}
+
+.loading {
+  color: var(--text-secondary);
+  text-align: center;
+  padding: 1.5rem;
+  font-size: 0.9rem;
+}
+
+@media (max-width: 768px) {
+  .profile-page-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .profile-page-header h1 {
+    font-size: 1.2rem;
+  }
+
+  .period-entry {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .symptom-entry {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .symptom-tags {
+    justify-content: flex-start;
+  }
+}
