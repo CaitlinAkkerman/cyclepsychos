@@ -12,6 +12,14 @@ import householdRoutes from './routes/household.js';
 const app = express();
 const port = process.env.PORT || 5000;
 
+// CORS configuration
+app.use(cors({
+  origin: [
+    'https://cyclepsychos.vercel.app/',
+    'http://localhost:3000'
+  ]
+}));
+
 // Database setup
 const db = new sqlite3.Database(':memory:', (err) => {
   if (err) {
