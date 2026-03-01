@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { X, Check } from 'lucide-react';
 import '../styles/Logger.css';
+import { apiCall } from '../api';
 
 function CycleLogger({ profiles, onClose, onLogCreated, editingLog }) {
   const [selectedProfile, setSelectedProfile] = useState(profiles[0]?.id || '');
@@ -63,10 +64,9 @@ function CycleLogger({ profiles, onClose, onLogCreated, editingLog }) {
       const method = editingLog ? 'PUT' : 'POST';
       const url = editingLog ? `/api/logs/${editingLog.id}` : '/api/logs';
 
-      const response = await fetch(url, {
+      const response = await apiCall(url, {
         method: method,
         headers: {
-          'Content-Type': 'application/json',
           'Authorization': `Bearer ${localStorage.getItem('token')}`
         },
         body: JSON.stringify(payload)

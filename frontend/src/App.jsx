@@ -6,6 +6,7 @@ import Dashboard from './components/Dashboard';
 import ProfileManager from './components/ProfileManager';
 import ProfileDetailPage from './components/ProfileDetailPage';
 import CycleLogger from './components/CycleLogger';
+import { apiCall } from './api';
 
 function App() {
   const [currentUser, setCurrentUser] = useState(null);
@@ -25,7 +26,7 @@ function App() {
 
   const loadHousehold = async () => {
     try {
-      const response = await fetch('/api/household', {
+      const response = await apiCall('/api/household', {
         headers: { 'Authorization': `Bearer ${localStorage.getItem('token')}` }
       });
       const data = await response.json();

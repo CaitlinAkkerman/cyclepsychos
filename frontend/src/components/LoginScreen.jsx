@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Droplet, Mail, Lock, User } from 'lucide-react';
 import '../styles/Auth.css';
+import { apiCall } from '../api';
 
 function LoginScreen({ onLogin }) {
   const [isLogin, setIsLogin] = useState(true);
@@ -21,9 +22,8 @@ function LoginScreen({ onLogin }) {
         ? { email, password }
         : { email, password, name };
 
-      const response = await fetch(endpoint, {
+      const response = await apiCall(endpoint, {
         method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(body)
       });
 

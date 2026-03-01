@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { ChevronLeft, ChevronRight, Plus } from 'lucide-react';
 import '../styles/Dashboard.css';
 
+
 function Dashboard({ household, profiles, onAddLog, onEditLog, onProfileClick }) {
   const [currentDate, setCurrentDate] = useState(new Date());
   const [selectedProfile, setSelectedProfile] = useState(null);

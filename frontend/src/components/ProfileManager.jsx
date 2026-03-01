@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Plus, Trash2 } from 'lucide-react';
 import '../styles/ProfileManager.css';
+import { apiCall } from '../api';
 
 function ProfileManager({ household, profiles, onProfilesUpdate }) {
   const [showAddForm, setShowAddForm] = useState(false);
@@ -25,10 +26,9 @@ function ProfileManager({ household, profiles, onProfilesUpdate }) {
     setLoading(true);
 
     try {
-      const response = await fetch('/api/profiles', {
+      const response = await apiCall('/api/profiles', {
         method: 'POST',
         headers: {
-          'Content-Type': 'application/json',
           'Authorization': `Bearer ${localStorage.getItem('token')}`
         },
         body: JSON.stringify(formData)
@@ -62,7 +62,7 @@ function ProfileManager({ household, profiles, onProfilesUpdate }) {
     }
 
     try {
-      const response = await fetch(`/api/profiles/${profileId}`, {
+      const response = await apiCall(`/api/profiles/${profileId}`, {
         method: 'DELETE',
         headers: {
           'Authorization': `Bearer ${localStorage.getItem('token')}`

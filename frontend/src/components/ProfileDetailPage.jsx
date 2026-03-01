@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { ChevronLeft, Edit2 } from 'lucide-react';
 import '../styles/ProfileDetail.css';
+import { apiCall } from '../api';
 
 function ProfileDetailPage({ profile, onBack, onEditLog }) {
   const [logs, setLogs] = useState([]);
@@ -40,7 +41,7 @@ function ProfileDetailPage({ profile, onBack, onEditLog }) {
     if (!profile?.id) return;
     
     try {
-      const response = await fetch(`/api/logs/profile/${profile.id}`, {
+      const response = await apiCall(`/api/logs/profile/${profile.id}`, {
         headers: { 'Authorization': `Bearer ${localStorage.getItem('token')}` }
       });
       const data = await response.json();
@@ -59,10 +60,9 @@ function ProfileDetailPage({ profile, onBack, onEditLog }) {
   
     try {
       console.log('Sending PUT request...');
-      const response = await fetch(`/api/profiles/${profile.id}`, {
+      const response = await apiCall(`/api/profiles/${profile.id}`, {
         method: 'PUT',
         headers: {
-          'Content-Type': 'application/json',
           'Authorization': `Bearer ${localStorage.getItem('token')}`
         },
         body: JSON.stringify({
