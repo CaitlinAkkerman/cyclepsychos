@@ -15,7 +15,7 @@ const port = process.env.PORT || 5000;
 const cors = require('cors');
 app.use(cors({
   origin: [
-    "https://cyclepsychos.vercel.app/",
+    "https://cyclesychos-frontend-caitlin.herokuapp.com/",
     "http://localhost:3000"
   ]
 }));
