@@ -15,7 +15,7 @@ const port = process.env.PORT || 5000;
 // CORS configuration
 app.use(cors({
   origin: [
-    'https://cyclepsychos.vercel.app/',
+    'https://cyclepsychos-frontend-abc123.vercel.app',
     'http://localhost:3000'
   ]
 }));
